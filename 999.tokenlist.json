@@ -1,0 +1,432 @@
+{
+  "name": "DeepCore",
+  "timestamp": "2026-10-10T15:39:45Z",
+  "version": {
+    "major": 1,
+    "minor": 1,
+    "patch": 0
+  },
+  "keywords": [
+    "deepcore",
+    "dex",
+    "launchpad",
+    "stocks"
+  ],
+  "tags": {
+    "native": {
+      "name": "Native asset",
+      "description": "The chain gas token, addressed as the zero address in DeepCore pools."
+    },
+    "stock": {
+      "name": "Tokenised stock",
+      "description": "An issuer controlled security token. The issuer can pause transfers, upgrade the code and in most designs burn from any holder. See extensions.stock."
+    }
+  },
+  "tokens": [
+    {
+      "chainId": 999,
+      "address": "0x0000000000000000000000000000000000000000",
+      "decimals": 18,
+      "name": "HYPE",
+      "symbol": "HYPE",
+      "tags": [
+        "native"
+      ]
+    },
+    {
+      "chainId": 999,
+      "address": "0x5555555555555555555555555555555555555555",
+      "decimals": 18,
+      "name": "Wrapped HYPE",
+      "symbol": "WHYPE"
+    },
+    {
+      "chainId": 999,
+      "address": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+      "decimals": 6,
+      "name": "USD₮0",
+      "symbol": "USD₮0"
+    },
+    {
+      "chainId": 999,
+      "address": "0xa8ddb5Cd96b5222AFe198316E9A57CAA642850D5",
+      "decimals": 18,
+      "name": "Wrapped NVIDIA xStock",
+      "symbol": "wNVDAx",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Backed (xStocks, ERC-4626 wrapper)",
+          "ticker": "NVDA",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": false,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "wraps": {
+            "asset": "0xc845b2894dBddd03858fd2D643B4eF725fE0849d",
+            "standard": "ERC-4626"
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0xE7E553Cd128F0011777323A0b44a7b96EA1CB540",
+      "decimals": 18,
+      "name": "Wrapped SP500 xStock",
+      "symbol": "wSPYx",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Backed (xStocks, ERC-4626 wrapper)",
+          "ticker": "SPY",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": false,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "wraps": {
+            "asset": "0x90A2a4c76b5D8c0bc892A69EA28Aa775a8f2dD48",
+            "standard": "ERC-4626"
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0x4C1AE29c159838fC1b224636E28E086EB69101f7",
+      "decimals": 18,
+      "name": "Wrapped Nasdaq xStock",
+      "symbol": "wQQQx",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Backed (xStocks, ERC-4626 wrapper)",
+          "ticker": "QQQ",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": false,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "wraps": {
+            "asset": "0xa753A7395cAe905Cd615Da0B82A53E0560f250af",
+            "standard": "ERC-4626"
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0x6215a58ed045d71F2561AaAbe54f4C885C522998",
+      "decimals": 18,
+      "name": "Wrapped SK hynix xStock",
+      "symbol": "wSKHYx",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Backed (xStocks, ERC-4626 wrapper)",
+          "ticker": "SKHY",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": false,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "wraps": {
+            "asset": "0x58100046a4Afcd4eE4faDbD4244f3f895a341c56",
+            "standard": "ERC-4626"
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0xe2047ee3bdDb5C99ae428AB83df63f8730698e30",
+      "decimals": 18,
+      "name": "Wrapped Micron Technology xStock",
+      "symbol": "wMUx",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Backed (xStocks, ERC-4626 wrapper)",
+          "ticker": "MU",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": false,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "wraps": {
+            "asset": "0xf6a873BAe4Ba1B304e45dF52A4b7D176E1C6a8c4",
+            "standard": "ERC-4626"
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0x95687557C66BC799a850bA7037673528238ae763",
+      "decimals": 18,
+      "name": "Wrapped Space Exploration Technologies Corp.",
+      "symbol": "SPCX.dw",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Dinari (dShares, ERC-4626 wrapper)",
+          "ticker": "SPCX",
+          "rebasing": false,
+          "controls": {
+            "pause": false,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": true,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "wraps": {
+            "asset": "0x9b4Db2271EB1fa0aEe1abA7ed55E51C38cE514a3",
+            "standard": "ERC-4626"
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0xB989ad9b91886b1Aaed8DaADb26F028b29b40945",
+      "decimals": 18,
+      "name": "NVIDIA (Ondo Tokenized)",
+      "symbol": "NVDAon",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Ondo (Ondo Stocks)",
+          "ticker": "NVDA",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": true,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0x417883b1709545f1211A25b00ad13455fC7F1bc5",
+      "decimals": 18,
+      "name": "Tesla (Ondo Tokenized)",
+      "symbol": "TSLAon",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Ondo (Ondo Stocks)",
+          "ticker": "TSLA",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": true,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0x4D34798f18Eb747F7225663F0553eA2D880cf75D",
+      "decimals": 18,
+      "name": "Alphabet Class A (Ondo Tokenized)",
+      "symbol": "GOOGLon",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Ondo (Ondo Stocks)",
+          "ticker": "GOOGL",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": true,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0x639Bcd00422facAcA534063e3d860e8fcf78B46F",
+      "decimals": 18,
+      "name": "Coinbase (Ondo Tokenized)",
+      "symbol": "COINon",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Ondo (Ondo Stocks)",
+          "ticker": "COIN",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": true,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0x0f8E33F5CdefAE9C2E59de8fB61feD347046D046",
+      "decimals": 18,
+      "name": "Micron Technology (Ondo Tokenized)",
+      "symbol": "MUon",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Ondo (Ondo Stocks)",
+          "ticker": "MU",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": true,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0x13a81c5e8b4AB05Fc721DfF7bA95e250b29458F8",
+      "decimals": 18,
+      "name": "Circle Internet Group (Ondo Tokenized)",
+      "symbol": "CRCLon",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Ondo (Ondo Stocks)",
+          "ticker": "CRCL",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": true,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    },
+    {
+      "chainId": 999,
+      "address": "0x32eC2792aeC02122eDD9f28866B720db1e1c1B54",
+      "decimals": 18,
+      "name": "SPDR S&P 500 ETF (Ondo Tokenized)",
+      "symbol": "SPYon",
+      "tags": [
+        "stock"
+      ],
+      "extensions": {
+        "stock": {
+          "issuer": "Ondo (Ondo Stocks)",
+          "ticker": "SPY",
+          "rebasing": false,
+          "controls": {
+            "pause": true,
+            "blocklist": true,
+            "allowlist": false,
+            "issuerBurn": true,
+            "upgradeable": true,
+            "uiMultiplier": false,
+            "rebasing": false
+          },
+          "verifiedAt": "2026-09-19"
+        }
+      }
+    }
+  ],
+  "extensions": {
+    "deepcore": {
+      "chainId": 999,
+      "verifiedOnChain": true
+    }
+  }
+}
