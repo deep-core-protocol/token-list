@@ -40,6 +40,9 @@ directly will be regenerated over. Send the change to the source tables instead
 
 | Chain | Chain id | Tokens | Version | URL |
 | --- | --- | --- | --- | --- |
+| Robinhood Chain | 4663 | 10 | 2.1.0 | `https://raw.githubusercontent.com/deep-core-protocol/token-list/main/4663.tokenlist.json` |
+| BNB Smart Chain | 56 | 75 | 1.1.0 | `https://raw.githubusercontent.com/deep-core-protocol/token-list/main/56.tokenlist.json` |
+| Base | 8453 | 25 | 2.1.0 | `https://raw.githubusercontent.com/deep-core-protocol/token-list/main/8453.tokenlist.json` |
 | HyperEVM | 999 | 16 | 1.1.0 | `https://raw.githubusercontent.com/deep-core-protocol/token-list/main/999.tokenlist.json` |
 
 Load one by URL in any wallet or interface that accepts a token list, or through

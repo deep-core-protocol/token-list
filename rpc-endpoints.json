@@ -1,9 +1,30 @@
 {
+  "56": [
+    "https://56.rpc.thirdweb.com",
+    "https://bsc-dataseed.bnbchain.org",
+    "https://bsc-dataseed1.ninicoin.io",
+    "https://bsc-dataseed1.defibit.io",
+    "https://bsc-rpc.publicnode.com"
+  ],
   "999": [
     "https://rpc.purroofgroup.com",
     "https://hyperliquid.drpc.org",
     "https://999.rpc.thirdweb.com",
     "https://hyperliquid-rpc.publicnode.com",
     "https://rpc.hyperliquid.xyz/evm"
+  ],
+  "4663": [
+    "https://rpc.mainnet.chain.robinhood.com",
+    "https://rpc.ordofi.network",
+    "https://robinhood.rpc.blxrbdn.com",
+    "https://robinhood-rpc.publicnode.com",
+    "https://rpc-robinhood.blockmachine.io"
+  ],
+  "8453": [
+    "https://8453.rpc.thirdweb.com",
+    "https://base.drpc.org",
+    "https://base.gateway.tenderly.co",
+    "https://base-mainnet.public.blastapi.io",
+    "https://mainnet.base.org"
   ]
 }
