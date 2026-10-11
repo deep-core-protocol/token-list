@@ -36,6 +36,19 @@ Nothing in a list is hand-typed, and a pull request that edits a list JSON
 directly will be regenerated over. Send the change to the source tables instead
 (see "Adding a token").
 
+## Features
+
+- **One list per DeepCore chain:** HyperEVM, BNB Chain, Robinhood Chain and Base, where DeepCore is
+  live at the same contract addresses on every chain.
+- **Read from the chain.** Every name, symbol and decimals is re-read on chain before a list is
+  published, and the native asset is listed on every chain.
+- **Tokenised stocks, labelled.** Each stock carries its issuer, ticker and the issuer's controls
+  (pause, blocklist, allowlist, burn, upgradeability, UI multiplier, rebasing), read on chain.
+- **Logos only from a source.** A token has a logo only where an official file exists; otherwise it
+  has none.
+- **Ready to load.** Standard Token Lists JSON at a stable URL per chain, and
+  `fetchTokenList` / `deepcoreTokenListUrl` in the MIT SDK.
+
 ## The lists
 
 | Chain | Chain id | Tokens | Version | URL |
