@@ -47,8 +47,27 @@
    not be observed may still exist.
    ============================================================================ */
 
-import { getDeployment } from "@deepcoreprotocol/sdk";
+import { existsSync, readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { encodeFunctionData, parseAbi } from "viem";
+
+/* The DeepCore Vault per chain: from the SDK where it is installed (the monorepo), else from the
+   `vaults.json` that scripts/sync.mjs writes beside the lists from that same SDK (the published
+   repository, which installs no SDK). Never restated by hand. */
+const VAULTS_FILE = join(dirname(fileURLToPath(import.meta.url)), "..", "vaults.json");
+let vaultTable = null;
+async function vaultOf(chainId) {
+  if (vaultTable === null) {
+    try {
+      const sdk = await import("@deepcoreprotocol/sdk");
+      vaultTable = Object.fromEntries(sdk.DEEPCORE_CHAIN_IDS.map((id) => [String(id), sdk.getDeployment(id)?.vault]));
+    } catch {
+      vaultTable = existsSync(VAULTS_FILE) ? JSON.parse(readFileSync(VAULTS_FILE, "utf8")) : {};
+    }
+  }
+  return vaultTable[String(chainId)] ?? undefined;
+}
 
 export const MULTICALL3 = "0xcA11bde05977b3631167028862bE2a173976CA11";
 const ZERO = "0x0000000000000000000000000000000000000000";
@@ -272,7 +291,7 @@ export async function checkStockOnChain(client, chainId, t, ext, head) {
   const blockReads = [];
   /* The DeepCore Vault is the contract a stock must be able to reach, on every chain the address book
      records a deployment for; it is read from the SDK, never restated here. */
-  const vault = getDeployment(chainId)?.vault;
+  const vault = await vaultOf(chainId);
   const subjects = [MULTICALL3, ...(vault === undefined ? [] : [vault])];
   for (const fn of ["isBlocked", "isBlacklisted"]) {
     for (const a of subjects) {
